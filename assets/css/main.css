@@ -2773,11 +2773,6 @@ input, select, textarea {
 			background-size: cover;
 		}
 
-			#header .logo.fa-paper-plane-o:before {
-				left: -0.075em;
-				position: relative;
-			}
-
 		#header h1 {
 			font-size: 2.5em;
 			margin: 0;
