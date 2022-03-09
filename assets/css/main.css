@@ -193,7 +193,13 @@ input, select, textarea {
 		height: 100%;
 		transform-style: preserve-3d;
 		z-index: -1;
+		margin-top: -30px;
 		
+	}
+	
+	#header div p{
+		color: white;
+		font-weight: bold;
 	}
 
 	.wrapper{
@@ -210,6 +216,7 @@ input, select, textarea {
 		width: 100vw;
 		object-fit: cover;
 		z-index: -1;
+		filter: blur(5px);
 	}
 
 /* Container */
@@ -2763,26 +2770,6 @@ input, select, textarea {
 		z-index: -1;
 	}
 
-		#header:before, #header:after {
-			background: rgba(224, 224, 224, 0.75);
-			content: '';
-			left: 50%;
-			position: absolute;
-			width: 1px;
-			z-index: 0;
-		}
-
-		#header:before {
-			height: calc(100% - 50px);
-			opacity: 0.15;
-			top: 0;
-		}
-
-		#header:after {
-			bottom: 0;
-			height: 50px;
-		}
-
 		#header a {
 			border-bottom-color: rgba(255, 255, 255, 0.35);
 			color: rgba(255, 255, 255, 0.8);
@@ -3064,14 +3051,6 @@ input, select, textarea {
 				padding: 6em 0 12em 0;
 			}
 
-				#header:before {
-					height: calc(100% - 25px);
-				}
-
-				#header:after {
-					height: 25px;
-				}
-
 				#header h1 {
 					font-size: 2em;
 				}
@@ -3214,14 +3193,6 @@ input, select, textarea {
 				padding: 3em 0 7em 0;
 			}
 
-				#header:before {
-					height: calc(100% - 20px);
-				}
-
-				#header:after {
-					height: 20px;
-				}
-
 				#header .logo {
 					font-size: 1.5em;
 				}
@@ -3338,12 +3309,13 @@ input, select, textarea {
 
 .language_selector{
 	padding: 10px;
-	position: absolute;
+	position: sticky;
 	top: 10px;
 	left: 10px;
 	z-index: 3;
 	background-color: #7e7e7e;
 	border-radius: 5px;
+	width: 60px;
 }
 
 .language{
