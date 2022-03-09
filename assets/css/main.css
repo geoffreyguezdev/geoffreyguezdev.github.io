@@ -2705,15 +2705,33 @@ input, select, textarea {
 /* Header */
 
 	#header {
-		background-attachment: scroll,							scroll,					fixed;
-		background-image: url("images/top-3200.svg"), url("images/overlay.png"), url("../../images/header.jpg");
-		background-position: bottom center,					top left,				center center;
-		background-repeat: repeat-x,						repeat,					no-repeat;
-		background-size: 3200px 460px,					auto,					cover;
 		color: rgba(255, 255, 255, 0.8);
 		padding: 10em 0 20em 0;
 		position: relative;
 		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		transform-style: preserve-3d;
+		z-index: -1;
+		
+	}
+
+	.wrapper{
+		height: 100vh;
+		overflow-y: auto;
+		overflow-x: hidden;
+		perspective: 10px;
+	}
+
+	.background{
+		transform: translateZ(-10px) scale(2);
+		position: absolute;
+		height: 100vh;
+		width: 100vw;
+		object-fit: cover;
+		z-index: -1;
 	}
 
 		#header:before, #header:after {
@@ -2900,6 +2918,7 @@ input, select, textarea {
 		padding: 6em 0 5em 0;
 		position: relative;
 		z-index: 1;
+		background-color: white;
 	}
 
 		#main:before {
@@ -3013,9 +3032,6 @@ input, select, textarea {
 		/* Header */
 
 			#header {
-				background-attachment: scroll,							scroll,							scroll;
-				background-image: url("images/top-1600.svg"), url("images/overlay.png"), url("../../images/header.jpg");
-				background-size: 1600px 230px,					auto,							cover;
 				padding: 6em 0 12em 0;
 			}
 
@@ -3166,8 +3182,6 @@ input, select, textarea {
 		/* Header */
 
 			#header {
-				background-image: url("images/top-1280.svg"), url("images/overlay.png"), url("../../images/header.jpg");
-				background-size: 1280px 184px,						auto,							cover;
 				padding: 3em 0 7em 0;
 			}
 
@@ -3292,3 +3306,31 @@ input, select, textarea {
 				}
 
 	}
+
+.language_selector{
+	padding: 10px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	z-index: 3;
+	background-color: #7e7e7e;
+	border-radius: 5px;
+}
+
+.language{
+	color: transparent;
+	padding: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center
+}
+
+.language img{
+	height: 20px;
+	width: auto;
+}
+
+.language_selected{
+	background-color: white;
+	border-radius: 5px;
+}
